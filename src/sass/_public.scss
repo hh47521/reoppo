@@ -1,0 +1,23 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+@mixin size($width : 50px,$height : 50px){
+	width: $width;
+	height: $height;
+}
+@mixin  position($posi:absolute,$left:0px,$top:0px){
+	position: $posi;
+	left: $left;
+	top: $top;
+}
+@mixin paddleftright($left : 50px,$right : 50px){
+	padding-left: $left;
+	padding-right: $right;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
