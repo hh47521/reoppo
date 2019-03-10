@@ -14,6 +14,10 @@ nav{
 // 			padding-right: 52px;
 			color: black;
 		}
+		a:hover{
+			text-decoration: none;
+			color: #877e7e;
+		}
 		.first_a{
 			font-size: 22px;
 			
@@ -32,6 +36,7 @@ nav{
 		@include size(100%,100%);
 	}
 	@include paddleftright(0px,0px)
+	
 }
 .center{
 	@include size(100%,300px);
@@ -88,7 +93,6 @@ nav{
 			}
 		}
 	}
-	
 	.bottom_in{
 		@include paddleftright(00px,0px);
 	}
@@ -103,6 +107,29 @@ nav{
 		padding-top: 30px;
 		.bottom_in3{
 			text-align:right;
+		}
+	}
+}
+.navigator_phone{
+	display: none;
+	@include size(100%,368px);
+	background: #f2f2f2;
+	dl{
+		margin: 0 auto;
+		padding-top: 40px;
+		width: 962px;
+		dt{
+			@include size(373px,286px);
+			float: left;
+		}
+		dd{
+			@include size(138px,138px);
+			float: left;
+			margin: 4px;
+			margin-top: 0;
+		}
+		.row2{
+			margin-top:4px;
 		}
 	}
 }

@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="./dist/bootstrap.min.css">
 		<link rel="stylesheet" href="./dist/index.min.css">
+		<link rel="stylesheet" href="./dist/swiper.min.css">
 		<title></title>
 	</head>
 	<body>
@@ -15,8 +16,8 @@
 					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
 						<a href="javascript:;" class="first_a">OPPO</a>
 					</div>
-					<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-						<a href="javascript:;">手机</a>
+					<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 second_div">
+						<a href="javascript:;"  id="second_a">手机</a>
 					</div>
 					<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
 						<a href="javascript:;">品牌</a>
@@ -47,11 +48,38 @@
 					</div>
 				</div>
 			</div>
+			<div class="navigator_phone" id="navigator_phone">
+				<dl>
+					<dt><img src="./src/img/img2/phone1-3.jpg" alt=""></dt>
+					<dd><img src="./src/img/img2/phone2.jpg" alt=""></dd>
+					<dd><img src="./src/img/img2/phone3.jpg" alt=""></dd>
+					<dd><img src="./src/img/img2/phone3.jpg" alt=""></dd>
+					<dd><img src="./src/img/img2/phone3.jpg" alt=""></dd>
+					<dd class="row2"><img src="./src/img/img2/phone2.jpg" alt=""></dd>
+					<dd class="row2"><img src="./src/img/img2/phone2.jpg" alt=""></dd>
+					<dd class="row2"><img src="./src/img/img2/phone2.jpg" alt=""></dd>
+					<dd class="row2"><img src="./src/img/img2/phone3.jpg" alt=""></dd>
+				</dl>
+				
+			</div>
 		</nav>
-		
-		<div class="container-fluid banner">
-			<img src="./src/img/img/201902060902245c5a378415826.jpg" alt="">
-		  
+		<div class="container-fluid banner swiper-container banner">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="./src/img/img/201902060902245c5a378415826.jpg" alt=""></div>
+				<div class="swiper-slide"><img src="./src/img/img/201806290306015b35e0ad9d833.jpg" alt=""></div>
+				<div class="swiper-slide"><img src="./src/img/img/201812060912455c08829157511.jpg" alt=""></div>
+				<div class="swiper-slide"><img src="./src/img/img/201810220910315bcd2d2321996.jpg" alt=""></div>
+				<div class="swiper-slide"><img src="./src/img/img/201806290306015b35e0ad9d833.jpg" alt=""></div>
+			</div>
+			<!-- 如果需要分页器 -->
+			<div class="swiper-pagination" id="swiper-pagination"></div>
+			
+			<!-- 如果需要导航按钮 -->
+			<!-- <div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div> -->
+			
+			<!-- 如果需要滚动条 -->
+			<div class="swiper-scrollbar"></div>
 		</div>
 		<div class="container-fluid center">
 			<div class="row">
@@ -144,5 +172,8 @@
 		
 		<script src="dist/jquery-1.11.3.js"></script>
 		<script src="dist/bootstrap.min.js"></script>
+		<script src="dist/swiper.min.js"></script>
+		<script src="dist/indexswiper.min.js"></script>
+		<script src="src/js/index.js"></script>
 	</body>
 </html>

@@ -8,7 +8,7 @@ const sass = require('gulp-sass');
 const cssnano = require('gulp-cssnano');
 
 //创建并发布任务
-gulp.task('index',function(){
+gulp.task('indexsass',function(){
 	gulp.src('./src/sass/index.scss')
 	.pipe(sass())
 	//.pipe(cssnano())
@@ -16,5 +16,20 @@ gulp.task('index',function(){
 	.pipe(gulp.dest('./dist'));
 })
 gulp.task('default',()=>{
-	gulp.watch(['./src/sass/index.scss'],['index']);
+	gulp.watch(['./src/sass/index.scss'],['indexsass']);
+})
+gulp.task('indexswiper',function(){
+	gulp.src('./src/js/indexswiper.js')
+	.pipe(uglify())
+	.pipe(rename({'suffix' : '.min'}))
+	.pipe(gulp.dest('./dist'));
+})
+gulp.task('default',()=>{
+	gulp.watch(['./src/js/indexswiper.js'],['indexsass','indexswiper']);
+})
+gulp.task('indexjs',function(){
+	gulp.src('./src/js/index.js')
+	.pipe(uglify())
+	.pipe(rename({'suffix' : '.min'}))
+	.pipe(gulp.dest('./dist'));
 })
