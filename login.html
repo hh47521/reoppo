@@ -28,20 +28,43 @@
 				登陆 OPPO 账号可享受更多的服务
 			</div>
 		</div>
-		<div class="message">
-			<ul>
-				<li><a href="javascript:;">账号登陆</a><span>|</span><a href="javascript:;">扫码登录</a></li>
-				<input type="text" name="" id="" value="" />
-				<input type="text" name="" id="" value="" />
-				<li><a href="javascript:;">关于 OPPO 隐私政策</a><a href="javascript:;">忘记密码</a></li>
-				<input type="button" name="" id="" value="登陆" />
-				<li><a href="javascript:;">注册 OPPO 账号</a></li>
-				<li><a href="javascript:;">其它方式登陆</a></li>
-				<li><a href="javascript:;"><img src="src/img/img2/qqlogo.jpg" alt=""></a><a href="javascript:;"></a><img src="src/img/img2/wechatlogo.jpg" alt=""></li>
-			</ul>
-		</div>
-		<div class="bottom">
+		<div class="message" id="message">
+			<div class="message_row1" id="message_row1">
+				<a href="javascript:;" class="account_a1" id="account_a1">账号登陆</a><span>|</span><a href="javascript:;" class="account_a2" id="account_a2">扫码登录</a>
+			</div>
+			<div class="message_row4" id="message_row4">
+				<div class="message_row2" id="message_row2">
+					<ul>
+						<input type="text" name="" id="" value="" class="first_input" placeholder="手机号码或邮箱"/>
+						<input type="text" name="" id="" value="" class="second_input" placeholder="密码"/>
+						<li class="message_row2_first_li"><a href="javascript:;" class="message_row2_first_li_a1">关于 OPPO 隐私政策</a><a href="javascript:;" class="message_row2_first_li_a2">忘记密码</a></li>
+						<input type="button" name="" id="" value="登陆" class="three_input"/>
+						<li class="message_row2_second_li"><a href="javascript:;">注册 OPPO 账号</a></li>
+						<li class="message_row2_three_li"><span>____</span><a href="javascript:;">其它方式登陆</a><span>____</span></li>
+						<li class="message_row2_last_li"><a href="javascript:;" class="message_row2_last_li_a"><img src="src/img/img2/qqlogo.jpg" alt=""></a><a href="javascript:;"><img src="src/img/img2/wechatlogo.jpg" alt=""></a></li>
+					</ul>
+				</div>
+				<div class="message_row3" id="message_row3">
+						<div class="message_row3_first_div">
+							<img src="src/img/img2/two_code.jpg" alt="" class="message_row3_first_img">
+							<img src="src/img/img2/two_pic.jpg" alt="">
+						</div>
+						<p class="message_row3_first_p">请进入OPPO 手机“设置-OPPO 帐号“扫码登录</p>
+				</div>
+			</div>
+			
 			
 		</div>
+		<div class="bottom">
+			<div class="bottom_1">
+				<a href="javascript" class="bottom_a1">简体中文</a><a href="javascript" class="bottom_a2">English</a>
+			</div>
+			<div class="bottom_2">
+				&copy; 2005 - 2009 OPPO 版权所有 粤ICP备08130115号-1 联系方式：4001-666-888
+			</div>
+		</div>
+		<script src="dist/jquery-1.11.3.js"></script>
+		<script src="dist/jquery.cookie.js"></script>
+		<script src="dist/login.min.js"></script>
 	</body>
 </html>

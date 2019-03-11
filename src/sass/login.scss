@@ -2,7 +2,7 @@
 nav{
 	@include size(1182px,70px);
 	margin: 0 auto;
-	border: 1px solid black;
+	//border: 1px solid black;
 	ul .first_li{
 		float: left;
 		height: 70px;
@@ -33,7 +33,7 @@ nav{
 	@include size(444px,60px);
 	margin: 0 auto;
 	margin-top: 52px;
-	border: 1px solid black;
+	//border: 1px solid black;
 	text-align: center;
 	.title_in{
 		font-family: FZYOUH_508R--GB1-4;
@@ -46,12 +46,173 @@ nav{
 	@include size(444px,496px);
 	margin: 0 auto;
 	margin-top: 74px;
-	border: 1px solid black;
+	
+	//border: 1px solid black;
 	background: #f7f7f7;
+	.message_row1{
+		padding-top: 34px;
+		padding-bottom: 46px;
+		margin: 0 auto;
+		position: relative;
+		@include size(246px,24px);
+		.account_a1,.account_a2{
+		font-family: sans-serif;
+		font-size: 21px;
+		font-weight: 500;
+		color: #2ad181;
+		}
+		span{
+			padding-right: 36px;
+			padding-left: 36px;
+			position: absolute;
+			left: 90px;
+			top: 42px;
+			color: #d8d8d8;
+		}
+		.account_a1{
+			float: left;
+			
+		}
+		.account_a2{
+			float: right;
+			color: #5a5a5a;
+		}
+	}
+	.message_row4{
+		@include size(288px,354px);
+		//border: 1px solid black;
+		margin: 0 auto;
+		position: relative;
+		.message_row2{
+			display: block;
+			@include size(288px,354px);
+			//border: 1px solid black;
+			margin: 0 auto;
+			position: absolute;
+			z-index: 1001;
+			ul input{
+				@include size(285px,48px);
+				border: 0;
+				border-radius: 10px;
+			}
+			.first_input{
+				margin-bottom: 10px;
+			}
+			.first_input,.second_input{
+				text-indent: 16px;
+				font-size: 14px;
+			}
+			.three_input{
+				@include size(285px,48px);
+				border: 0;
+				border-radius: 10px;
+				font-size: 15px;
+				color: white;
+				background-color: #2ad181;
+			}
+			.message_row2_first_li{
+				height: 36px;
+				line-height: 36px;
+				margin-bottom: 45px;
+				.message_row2_first_li_a1{
+					float: left;
+					font-size: 12px;
+					color: #4e7be2;
+				}
+				.message_row2_first_li_a2{
+					float: right;
+					font-size: 12px;
+					color: #4e7be2;
+				}
+			}
+			.message_row2_second_li{
+				@include size(100%,68px);
+				text-align: center;
+				line-height: 68px;
+				font-size: 16px;
+				a{
+					color: #34d386;
+				}				
+			}
+			.message_row2_three_li{
+				@include size(100%,12px);
+				text-align: center;
+				line-height: 12px;
+				font-size: 12px;
+				a{
+					color: #b9b9b9;
+					padding-left: 14px;
+					padding-right: 14px;
+				}
+				span{
+					color: #b9b9b9;
+				}
+			}
+			.message_row2_last_li{
+				width: 100%;
+				text-align: center;
+				margin-top: 18px;
+				.message_row2_last_li_a{
+					margin-right: 15px;
+				}
+			}
+		}
+		.message_row3{
+			@include size(368px,354px);
+			display: none;
+			//border: 1px solid black;
+			margin: 0 auto;
+			position: absolute;
+			left: -36px;
+			z-index: 1000;
+			.message_row3_first_div{
+				@include size(375px,188px);
+				margin: 0 auto;
+				margin-top: 42px;
+				margin-bottom: 48px;
+				.message_row3_first_img{
+					margin-right: 15px;
+				}
+			}
+			.message_row3_first_p{
+				width: 100%;
+				text-align: center;
+				opacity: .7;
+				font-family: sans-serif;
+				font-weight: 500;
+				font-size: 15px;
+				color: #000;
+			}
+		}
+	}
+	
+	
 }
 .bottom{
-	@include size(406px,60px);
+	@include size(444px,60px);
 	margin: 0 auto;
 	margin-top: 56px;
-	border: 1px solid black;
+	//border: 1px solid black;
+	.bottom_1{
+		@include size(126px,16px);
+		margin: 0 auto;
+		margin-bottom: 8px;
+		line-height: 16px;
+		.bottom_a1{
+			font-size: 14px;
+			float: left;
+			color: black;
+		}
+		.bottom_a2{
+			font-size: 14px;
+			float: right;
+			color: #afafaf;
+		}
+	}
+	.bottom_2{
+		margin: 0 auto;
+		font-size: 12px;
+		color:  #afafaf;
+		text-align: center;
+	}
 }

@@ -42,6 +42,20 @@ gulp.task('loginsass',function(){
 	.pipe(rename({'suffix' : '.min'}))
 	.pipe(gulp.dest('./dist'));
 })
+
+gulp.task('default',function(){
+    gulp.src('./src/js/login.js')
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(gulp.dest('./src'))
+});
+gulp.task('loginjs',function(){
+	gulp.src('./src/login.js')
+	.pipe(uglify())
+	.pipe(rename({'suffix' : '.min'}))
+	.pipe(gulp.dest('./dist'));
+})
 gulp.task('default',()=>{
-	gulp.watch(['./src/sass/index.scss','./src/js/indexswiper.js','./src/index.js','./src/sass/login.scss'],['indexsass','indexswiper','indexjs','loginsass']);
+	gulp.watch(['./src/sass/index.scss','./src/js/indexswiper.js','./src/index.js','./src/sass/login.scss','./src/login.js'],['indexsass','indexswiper','indexjs','loginsass','loginjs']);
 })
