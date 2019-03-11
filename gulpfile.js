@@ -11,12 +11,9 @@ const cssnano = require('gulp-cssnano');
 gulp.task('indexsass',function(){
 	gulp.src('./src/sass/index.scss')
 	.pipe(sass())
-	//.pipe(cssnano())
+	.pipe(cssnano())
 	.pipe(rename({'suffix' : '.min'}))
 	.pipe(gulp.dest('./dist'));
-})
-gulp.task('default',()=>{
-	gulp.watch(['./src/sass/index.scss','./src/js/indexswiper.js','./src/index.js'],['indexsass','indexswiper','index.js']);
 })
 gulp.task('indexswiper',function(){
 	gulp.src('./src/js/indexswiper.js')
@@ -37,4 +34,14 @@ gulp.task('indexjs',function(){
 	.pipe(uglify())
 	.pipe(rename({'suffix' : '.min'}))
 	.pipe(gulp.dest('./dist'));
+})
+gulp.task('loginsass',function(){
+	gulp.src('./src/sass/login.scss')
+	.pipe(sass())
+	.pipe(cssnano())
+	.pipe(rename({'suffix' : '.min'}))
+	.pipe(gulp.dest('./dist'));
+})
+gulp.task('default',()=>{
+	gulp.watch(['./src/sass/index.scss','./src/js/indexswiper.js','./src/index.js','./src/sass/login.scss'],['indexsass','indexswiper','indexjs','loginsass']);
 })

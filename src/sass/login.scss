@@ -1,0 +1,57 @@
+@import 'public';
+nav{
+	@include size(1182px,70px);
+	margin: 0 auto;
+	border: 1px solid black;
+	ul .first_li{
+		float: left;
+		height: 70px;
+		line-height: 70px;
+		span{
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		a{
+			color: black;
+			font-size: 16px;
+			font-family: FZYOUH_508R--GB1-4;
+		}
+	}
+	ul .last_li{
+		float: right;
+		height: 70px;
+		line-height: 70px;
+		a{
+			color: black;
+			font-size: 16px;
+			font-family: FZYOUH_508R--GB1-4;
+			padding-left: 28px;
+		}
+	}
+}
+.title{
+	@include size(444px,60px);
+	margin: 0 auto;
+	margin-top: 52px;
+	border: 1px solid black;
+	text-align: center;
+	.title_in{
+		font-family: FZYOUH_508R--GB1-4;
+		font-size: 12px;
+		margin-top: 12px;
+	}
+	
+}
+.message{
+	@include size(444px,496px);
+	margin: 0 auto;
+	margin-top: 74px;
+	border: 1px solid black;
+	background: #f7f7f7;
+}
+.bottom{
+	@include size(406px,60px);
+	margin: 0 auto;
+	margin-top: 56px;
+	border: 1px solid black;
+}
