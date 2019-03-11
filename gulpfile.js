@@ -16,7 +16,7 @@ gulp.task('indexsass',function(){
 	.pipe(gulp.dest('./dist'));
 })
 gulp.task('default',()=>{
-	gulp.watch(['./src/sass/index.scss'],['indexsass']);
+	gulp.watch(['./src/sass/index.scss','./src/js/indexswiper.js'],['indexsass','indexswiper']);
 })
 gulp.task('indexswiper',function(){
 	gulp.src('./src/js/indexswiper.js')
@@ -24,9 +24,7 @@ gulp.task('indexswiper',function(){
 	.pipe(rename({'suffix' : '.min'}))
 	.pipe(gulp.dest('./dist'));
 })
-gulp.task('default',()=>{
-	gulp.watch(['./src/js/indexswiper.js'],['indexsass','indexswiper']);
-})
+
 gulp.task('indexjs',function(){
 	gulp.src('./src/js/index.js')
 	.pipe(uglify())
