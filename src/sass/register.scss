@@ -1,0 +1,138 @@
+@import 'public';
+nav{
+	@include size(1182px,70px);
+	margin: 0 auto;
+	//border: 1px solid black;
+	ul .first_li{
+		float: left;
+		height: 70px;
+		line-height: 70px;
+		span{
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		a{
+			color: black;
+			font-size: 16px;
+			font-family: FZYOUH_508R--GB1-4;
+		}
+	}
+	ul .last_li{
+		float: right;
+		height: 70px;
+		line-height: 70px;
+		a{
+			color: black;
+			font-size: 16px;
+			font-family: FZYOUH_508R--GB1-4;
+			padding-left: 28px;
+		}
+	}
+}
+.title{
+	@include size(100%,22px);
+	text-align: center;
+	padding-top: 70px;
+	padding-bottom: 40px;
+	font-size: 20px;
+	font-weight: 700;
+}
+.center{
+	@include size(342px,450px);
+	//border: 1px solid black;
+	margin: 0 auto;
+	.center_div{
+		position: relative;
+		.center_div_div{
+		position: absolute;
+			@include size(90px,48px);
+			line-height: 48px;
+			text-align: center;
+			font-size: 14px;
+		}
+	} 
+	input{
+		@include size(342px,48px);
+		background: #f7f7f7;
+		border: 0;
+		border-radius: 10px;
+		text-indent: 16px;
+		font-size: 14px;
+	}
+	.center_first_p{
+		font-size: 12px;
+		color: #b0b0b0;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		font-family: sans-serif;
+	}
+	.center_second_p{
+		font-size: 12px;
+		color: #b0b0b0;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		font-family: sans-serif;
+	}
+	.center_input3{
+		@include size(210px,48px);
+		margin-right: 12px;
+	}
+	.center_input7{
+		@include size(120px,48px);
+		background-color: #2ad181;
+		color: white;
+		text-indent: 0;
+	}
+	.center_input2,.center_input3,.center_input4,.center_input5,.center_input6,.center_input7{
+		margin-bottom: 8px;
+	}
+	.center_input8{
+		@include size(16px,16px);
+		
+	}
+	.center_input6{
+		margin-top: 36px;
+		background-color: #2ad181;
+		color: white;
+		
+	}
+	span{
+		font-size: 12px;
+		color: #9b9b9b;
+		padding-left: 6px;
+		padding-right: 12px;
+	}
+	a{
+		font-size: 12px;
+		color: #4dd896;
+	}
+}
+
+.bottom{
+	@include size(444px,60px);
+	margin: 0 auto;
+	margin-top: 56px;
+	//border: 1px solid black;
+	.bottom_1{
+		@include size(126px,16px);
+		margin: 0 auto;
+		margin-bottom: 8px;
+		line-height: 16px;
+		.bottom_a1{
+			font-size: 12px;
+			float: left;
+			color: black;
+		}
+		.bottom_a2{
+			font-size: 12px;
+			float: right;
+			color: #afafaf;
+		}
+	}
+	.bottom_2{
+		margin: 0 auto;
+		font-size: 12px;
+		color:  #afafaf;
+		text-align: center;
+	}
+}

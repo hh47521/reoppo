@@ -56,6 +56,13 @@ gulp.task('loginjs',function(){
 	.pipe(rename({'suffix' : '.min'}))
 	.pipe(gulp.dest('./dist'));
 })
+gulp.task('registersass',function(){
+	gulp.src('./src/sass/register.scss')
+	.pipe(sass())
+	.pipe(cssnano())
+	.pipe(rename({'suffix' : '.min'}))
+	.pipe(gulp.dest('./dist'));
+})
 gulp.task('default',()=>{
-	gulp.watch(['./src/sass/index.scss','./src/js/indexswiper.js','./src/index.js','./src/sass/login.scss','./src/login.js'],['indexsass','indexswiper','indexjs','loginsass','loginjs']);
+	gulp.watch(['./src/sass/index.scss','./src/js/indexswiper.js','./src/index.js','./src/sass/login.scss','./src/login.js','./src/sass/register.scss'],['indexsass','indexswiper','indexjs','loginsass','loginjs','registersass']);
 })
