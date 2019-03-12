@@ -14,13 +14,18 @@ gulp.task('indexswiper',function(){
 	.pipe(rename({'suffix' : '.min'}))
 	.pipe(gulp.dest('./dist'));
 })
-
+gulp.task('listswiper',function(){
+	gulp.src('./src/js/listswiper.js')
+	.pipe(uglify())
+	.pipe(rename({'suffix' : '.min'}))
+	.pipe(gulp.dest('./dist'));
+})
 gulp.task('es5',function(){
     gulp.src('./src/js/es6/*.js')
         .pipe(babel({
             presets: ['@babel/env']
         }))
-        .pipe(gulp.dest('./src/js/es6'))
+        .pipe(gulp.dest('./src/js/es5'))
 });
 gulp.task('js',function(){
 	gulp.src('./src/js/es5/*.js')

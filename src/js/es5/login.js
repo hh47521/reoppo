@@ -1,6 +1,4 @@
-"use strict";
-
-// let $acc = $('#message #message_row1 a');
+"use strict"; // let $acc = $('#message #message_row1 a');
 // let $message1 = $('#message_row2')
 // let $message2 = $('#message_row3')
 // $acc.each(function(index,value){
@@ -8,6 +6,7 @@
 // 		$message('index').css('display','bl)
 // 	})
 // })
+
 var acc1 = document.getElementById('account_a1');
 var acc2 = document.getElementById('account_a2');
 var message1 = document.getElementById('message_row2');
