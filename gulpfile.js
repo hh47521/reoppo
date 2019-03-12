@@ -8,13 +8,6 @@ const sass = require('gulp-sass');
 const cssnano = require('gulp-cssnano');
 
 //创建并发布任务
-gulp.task('indexsass',function(){
-	gulp.src('./src/sass/index.scss')
-	.pipe(sass())
-	.pipe(cssnano())
-	.pipe(rename({'suffix' : '.min'}))
-	.pipe(gulp.dest('./dist'));
-})
 gulp.task('indexswiper',function(){
 	gulp.src('./src/js/indexswiper.js')
 	.pipe(uglify())
@@ -22,47 +15,26 @@ gulp.task('indexswiper',function(){
 	.pipe(gulp.dest('./dist'));
 })
 
-gulp.task('default',function(){
-    gulp.src('./src/js/index.js')
+gulp.task('es5',function(){
+    gulp.src('./src/js/es6/*.js')
         .pipe(babel({
             presets: ['@babel/env']
         }))
-        .pipe(gulp.dest('./src'))
+        .pipe(gulp.dest('./src/js/es6'))
 });
-gulp.task('indexjs',function(){
-	gulp.src('./src/index.js')
+gulp.task('js',function(){
+	gulp.src('./src/js/es5/*.js')
 	.pipe(uglify())
 	.pipe(rename({'suffix' : '.min'}))
 	.pipe(gulp.dest('./dist'));
 })
-gulp.task('loginsass',function(){
-	gulp.src('./src/sass/login.scss')
-	.pipe(sass())
-	.pipe(cssnano())
-	.pipe(rename({'suffix' : '.min'}))
-	.pipe(gulp.dest('./dist'));
-})
-
-gulp.task('default',function(){
-    gulp.src('./src/js/login.js')
-        .pipe(babel({
-            presets: ['@babel/env']
-        }))
-        .pipe(gulp.dest('./src'))
-});
-gulp.task('loginjs',function(){
-	gulp.src('./src/login.js')
-	.pipe(uglify())
-	.pipe(rename({'suffix' : '.min'}))
-	.pipe(gulp.dest('./dist'));
-})
-gulp.task('registersass',function(){
-	gulp.src('./src/sass/register.scss')
+gulp.task('sass',function(){
+	gulp.src('./src/sass/*.scss')
 	.pipe(sass())
 	.pipe(cssnano())
 	.pipe(rename({'suffix' : '.min'}))
 	.pipe(gulp.dest('./dist'));
 })
 gulp.task('default',()=>{
-	gulp.watch(['./src/sass/index.scss','./src/js/indexswiper.js','./src/index.js','./src/sass/login.scss','./src/login.js','./src/sass/register.scss'],['indexsass','indexswiper','indexjs','loginsass','loginjs','registersass']);
+	gulp.watch(['./src/js/es6/*.js','./src/js/es5/*.js','./src/sass/*.scss'],['es5','js','sass']);
 })

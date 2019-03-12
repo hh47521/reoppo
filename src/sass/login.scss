@@ -84,6 +84,14 @@ nav{
 		margin: 0 auto;
 		position: relative;
 		.message_row2{
+			.message_row2_first_div{
+				position: relative;
+				span{
+					position: absolute;
+					right: 13px;
+					top: 18px;
+				}
+			}
 			display: block;
 			@include size(288px,354px);
 			//border: 1px solid black;
