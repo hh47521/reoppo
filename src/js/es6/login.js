@@ -1,4 +1,4 @@
-"use strict";
+
 
 // let $acc = $('#message #message_row1 a');
 // let $message1 = $('#message_row2')

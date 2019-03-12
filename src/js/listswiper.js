@@ -11,11 +11,7 @@
     },
     
     //如果需要前进后退按钮
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-	  
-    },
+    
     speed:3000,
     autoplay: {
     delay: 5000,
